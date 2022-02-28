@@ -24,11 +24,5 @@ class ArquivoFragment : Fragment(R.layout.fragment_arquivo) {
         super.onDestroyView()
         _binding = null
     }
-    companion object{
-        fun newInstace():ArquivoFragment{
-            return ArquivoFragment()
-        }
-    }
-
 
 }
