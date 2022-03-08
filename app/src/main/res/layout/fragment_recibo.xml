@@ -3,19 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".iu.arquivos.ArquivoFragment">
+    tools:context=".iu.arquivos.ReciboFragment">
+
 
     <TextView
-        android:id="@+id/texto_fragmento_arquivo"
+        android:id="@+id/texto_fragmento_recibo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fontFamily="@font/aldrich"
         android:gravity="center"
-        android:text="@string/fragmento_arquivo"
+        android:text="@string/fragmento_recibo"
+        android:textColor="@color/design_default_color_error"
         android:textSize="32sp"
         android:textStyle="italic" />
 
     <Button
-        android:id="@+id/button_acao_arquivo"
+        android:id="@+id/button_acao_recibo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|bottom"
