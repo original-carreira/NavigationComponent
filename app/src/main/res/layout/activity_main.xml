@@ -4,11 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Container_fragmento"/>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_jetpack"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        app:title="Navigação com JetPack"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/Container_fragmento"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
 
 </LinearLayout>

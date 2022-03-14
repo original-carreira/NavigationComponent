@@ -1,8 +1,17 @@
 <resources>
     <string name="app_name">NavigationComponent</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text_next">PROXIMO</string>
     <string name="fragmento_arquivo">Fragmento Arquivo</string>
+    <string name="text_end">FIM</string>
+    <string name="fragmento_recibo">Fragmento Recibo</string>
+    <string name="texto_acionar">AÇÃO</string>
+    <string name="login_action_bar_title">Login</string>
+    <string name="texto_button_confirmar">CONFIRMAR</string>
+    <string name="texto_button_retornar">RETORNAR</string>
+    <string name="texto_campoLayout_senha">Senha</string>
+    <string name="texto_campoLayout_login">Login</string>
+    <string name="texto_error_invalid_username">Usuário Inválido</string>
+    <string name="texto_error_invalid_password">Senha Inválida</string>
 
 </resources>
