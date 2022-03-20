@@ -18,7 +18,7 @@ class LoginViewModel : ViewModel() {
     }
 
     val EventoEstadoAutenticacao = MutableLiveData<EstadoAutenticacao>()
-    var nomeUsuario:String = ""
+    var username:String = ""
     init {
        autenticacaoRecusada()
     }
@@ -27,7 +27,7 @@ class LoginViewModel : ViewModel() {
     }
     fun authentication (username:String, password:String){
         if (validacaoDadosEntrada(username, password)){
-            this.nomeUsuario = nomeUsuario
+            this.username = username
             EventoEstadoAutenticacao.value = EstadoAutenticacao.AutenticacaoValida
 //usuario autenticado
         }

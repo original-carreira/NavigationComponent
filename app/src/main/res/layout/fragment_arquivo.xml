@@ -10,10 +10,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center"
         android:textSize="32sp"
         android:textStyle="italic"
-        tools:text="fragmento_arquivo" />
+        tools:text="Bem vindo, Victor!" />
 
     <Button
         android:id="@+id/button_acao_arquivo"
