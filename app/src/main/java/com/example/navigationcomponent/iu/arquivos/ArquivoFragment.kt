@@ -28,18 +28,20 @@ class ArquivoFragment : Fragment(R.layout.fragment_arquivo) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.buttonAcaoArquivo.setOnClickListener {
-            findNavController().navigateComAnimacao(R.id.action_arquivoFragment_to_startFragment)
-        }
         loginViewModel.EventoEstadoAutenticacao.observe(viewLifecycleOwner, Observer {
             estadoautenticacao ->
             when (estadoautenticacao){
-                is LoginViewModel.EstadoAutenticacao.AutenticacaoValida -> { }
+                is LoginViewModel.EstadoAutenticacao.AutenticacaoValida -> {
+                    binding.textoFragmentoArquivo.text  = getString(R.string.texto_nomeUsuario, loginViewModel.nomeUsuario)
+                }
                 is LoginViewModel.EstadoAutenticacao.NaoAutenticado -> {
                     findNavController().navigate(R.id.loginFragment)
                 }
             }
         })
+        binding.buttonAcaoArquivo.setOnClickListener {
+            findNavController().navigateComAnimacao(R.id.action_arquivoFragment_to_startFragment)
+        }
 
     }
 

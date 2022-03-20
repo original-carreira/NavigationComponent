@@ -7,12 +7,13 @@
 
     <TextView
         android:id="@+id/texto_fragmento_arquivo"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:gravity="center"
-        android:text="@string/fragmento_arquivo"
         android:textSize="32sp"
-        android:textStyle="italic" />
+        android:textStyle="italic"
+        tools:text="fragmento_arquivo" />
 
     <Button
         android:id="@+id/button_acao_arquivo"

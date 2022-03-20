@@ -13,5 +13,6 @@
     <string name="texto_campoLayout_login">Login</string>
     <string name="texto_error_invalid_username">Usuário Inválido</string>
     <string name="texto_error_invalid_password">Senha Inválida</string>
+    <string name="texto_nomeUsuario">%1$s</string>
 
 </resources>
