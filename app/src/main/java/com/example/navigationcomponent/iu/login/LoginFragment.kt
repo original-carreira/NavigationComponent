@@ -6,12 +6,14 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.addCallback
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.navigationcomponent.R
 import com.example.navigationcomponent.databinding.LoginFragmentBinding
+import com.example.navigationcomponent.extensoes.dismissError
 import com.google.android.material.textfield.TextInputLayout
 
 class LoginFragment : Fragment(R.layout.login_fragment) {
@@ -49,6 +51,12 @@ class LoginFragment : Fragment(R.layout.login_fragment) {
             val username = binding.entradaCampoLogin.text.toString()
             val password = binding.entradaCampoPassword.text.toString()
             viewModel.authentication(username,password)
+        }
+        binding.entradaCampoLogin.addTextChangedListener {
+            binding.entradaLayoutCampoLogin.dismissError()
+        }
+        binding.entradaCampoPassword.addTextChangedListener {
+            binding.entradaLayoutCampoPassword.dismissError()
         }
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner){
             cancelaAutenticacao()
