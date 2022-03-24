@@ -14,5 +14,16 @@
     <string name="texto_error_invalid_username">Usuário Inválido</string>
     <string name="texto_error_invalid_password">Senha Inválida</string>
     <string name="texto_nomeUsuario">Bem vindo, %1$s</string>
+    <string name="titulo_arquivo_data_actionBar">Arquivo Data</string>
+    <string name="nome_hint_layout_entrada_arquivoData">Nome</string>
+    <string name="bio_hint_layout_entrada_arquivoData">Bio</string>
+    <string name="nome_invalido_layout_entrada_arquivoData">Nome inválido</string>
+    <string name="bio_invalida_layout_entrada_arquivoData">Bio inválida</string>
+    <string name="titulo_credenciais_actionBar">Credenciais</string>
+    <string name="username_hint_layout_entrada_credenciais">Nome do usuário</string>
+    <string name="password_hint_layout_entrada_credenciais">Senha</string>
+    <string name="username_invalido_layout_entrada_credenciais">Nome de usuário inválido</string>
+    <string name="password_invalido_layout_entrada_credenciais">Semha inválida</string>
+    <string name="texto_credenciais_name">Troque suas credenciais</string>
 
 </resources>

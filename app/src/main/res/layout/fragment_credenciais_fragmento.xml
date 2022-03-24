@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".iu.arquivoDeRegistro.credenciais.CredenciaisFragmento">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/texto_nomeTrocar_credenciais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Sr. Troque suas credenciais" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/entrada_username_layout_credenciais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/username_hint_layout_entrada_credenciais">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/entrada_username_Credencias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/entrada_password_layout_credenciais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/password_hint_layout_entrada_credenciais">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/entrada_password_Credenciais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/botao_finalizar_credenciais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/texto_button_confirmar" />
+
+</LinearLayout>
