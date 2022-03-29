@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/texto_campoLayout_login"
-        android:theme="@style/Widget.Design.TextInputLayout">
+        android:theme="@style/AppTextInputLayout">
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/entrada_campo_login"
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:hint="@string/texto_campoLayout_senha"
-        android:theme="@style/Widget.Design.TextInputLayout">
+        android:theme="@style/AppTextInputLayout">
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/entrada_campo_password"
@@ -42,6 +42,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_login_confirma"
+        style="@style/AppButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
@@ -49,6 +50,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_login_retorna"
+        style="@style/AppButton.Retorna"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"

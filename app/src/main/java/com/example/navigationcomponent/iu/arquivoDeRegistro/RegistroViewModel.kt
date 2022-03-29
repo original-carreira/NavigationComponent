@@ -40,12 +40,14 @@ class RegistroViewModel: ViewModel() {
         }
         return true
     }
+
     fun createCredenciais(username: String, password: String){
         if(isInvalidaCredencial(username, password)){
             this.authToken = "token"
             _eventoEstadoRegistro.value = EstadoDoRegistro.RegistroCompleto
         }
     }
+
     private fun isInvalidaCredencial(username: String,password: String):Boolean{
         val CamposInvalidos = arrayListOf<Pair<String, Int>>()
         if (username.isEmpty()){

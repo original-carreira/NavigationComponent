@@ -12,6 +12,7 @@
         android:id="@+id/entrada_name_layout_arquivoData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/AppTextInputLayout"
         android:hint="@string/nome_hint_layout_entrada_arquivoData">
 
         <androidx.appcompat.widget.AppCompatEditText
@@ -27,6 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:theme="@style/AppTextInputLayout"
         android:hint="@string/bio_hint_layout_entrada_arquivoData">
 
         <androidx.appcompat.widget.AppCompatEditText
@@ -42,6 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/text_next" />
+        android:text="@string/text_next"
+        style="@style/AppButton.Retorna"/>
 
 </LinearLayout>

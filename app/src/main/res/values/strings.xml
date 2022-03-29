@@ -24,6 +24,6 @@
     <string name="password_hint_layout_entrada_credenciais">Senha</string>
     <string name="username_invalido_layout_entrada_credenciais">Nome de usuário inválido</string>
     <string name="password_invalido_layout_entrada_credenciais">Semha inválida</string>
-    <string name="texto_credenciais_name">Troque suas credenciais</string>
+    <string name="texto_credenciais_name">%1$s, Troque suas credenciais</string>
 
 </resources>

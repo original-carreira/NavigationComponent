@@ -19,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:theme="@style/AppTextInputLayout"
         android:hint="@string/username_hint_layout_entrada_credenciais">
 
         <androidx.appcompat.widget.AppCompatEditText
@@ -34,6 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:theme="@style/AppTextInputLayout"
         android:hint="@string/password_hint_layout_entrada_credenciais">
 
         <androidx.appcompat.widget.AppCompatEditText
@@ -49,6 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        style="@style/AppButton"
         android:text="@string/texto_button_confirmar" />
 
 </LinearLayout>

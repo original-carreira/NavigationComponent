@@ -1,43 +1,49 @@
 package com.example.navigationcomponent.iu.login
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.navigationcomponent.R
 
 class LoginViewModel : ViewModel() {
-/*##### Representação do Estado do Usuário, se está logado ou não (Todos os possíveis estados de login) ######
-*###### Faz uma validação de autenticação                         #####*/
 
     sealed class EstadoAutenticacao {
         object NaoAutenticado: EstadoAutenticacao()
         object AutenticacaoValida: EstadoAutenticacao()
-        class AutenticacaoInvalida(
-            val campos:List<Pair<String, Int>> /*ID da string de erro.
-                                                *Aqui vai se mapeado uma msg de erro para o campo */
-        ): EstadoAutenticacao()
+        class AutenticacaoInvalida(  val campos:List<Pair<String, Int>> ): EstadoAutenticacao()
+        /*ID da string de erro.*Aqui vai se mapeado uma msg de erro para o campo */
     }
 
-    val EventoEstadoAutenticacao = MutableLiveData<EstadoAutenticacao>()
-    var username:String = ""
+    var username: String = ""
+    var token: String = ""
+
+    private val _EventoEstadoAutenticacao = MutableLiveData<EstadoAutenticacao>()
+    val EventoEstadoAutenticacao: LiveData<EstadoAutenticacao>
+        get() = _EventoEstadoAutenticacao
+
     init {
        autenticacaoRecusada()
     }
     fun autenticacaoRecusada(){
-        EventoEstadoAutenticacao.value = EstadoAutenticacao.NaoAutenticado
+        _EventoEstadoAutenticacao.value = EstadoAutenticacao.NaoAutenticado
     }
+
+    fun autenticaToke(token: String, username: String){
+        this.token = token
+        this.username = username
+        _EventoEstadoAutenticacao.value = EstadoAutenticacao.AutenticacaoValida
+    }
+
     fun authentication (username:String, password:String){
         if (validacaoDadosEntrada(username, password)){
             this.username = username
-            EventoEstadoAutenticacao.value = EstadoAutenticacao.AutenticacaoValida
+            _EventoEstadoAutenticacao.value = EstadoAutenticacao.AutenticacaoValida
 //usuario autenticado
         }
     }
 
-/*###### Fará a validação dos dados inseridos nos campos de usuário e senha, retornando msg de erro #####*/
-
     private fun validacaoDadosEntrada (username: String, password: String): Boolean {
         val camposInvalidos = arrayListOf<Pair<String, Int>>()
-
         if (username.isEmpty()){
             camposInvalidos.add(INPUT_USERNAME)
         }
@@ -46,7 +52,7 @@ class LoginViewModel : ViewModel() {
         }
     /* Vai verificar se um campo não está valido*/
         if (camposInvalidos.isNotEmpty()){
-            EventoEstadoAutenticacao.value = EstadoAutenticacao.AutenticacaoInvalida(camposInvalidos)
+            _EventoEstadoAutenticacao.value = EstadoAutenticacao.AutenticacaoInvalida(camposInvalidos)
             return false
         }
         return true
@@ -57,3 +63,7 @@ class LoginViewModel : ViewModel() {
         val INPUT_PASSWORD = "INPUT_PASSWORD" to R.string.texto_error_invalid_password
     }
 }
+
+/*##### Representação do Estado do Usuário, se está logado ou não (Todos os possíveis estados de login) ######
+*###### Faz uma validação de autenticação                         #####*/
+/*###### fun validacaodadosEntrada -> Fará a validação dos dados inseridos nos campos de usuário e senha, retornando msg de erro #####*/
