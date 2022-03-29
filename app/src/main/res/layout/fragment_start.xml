@@ -11,7 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/text_next" />
+        android:text="@string/text_next"
+        style="@style/AppButton"/>
 
     <Button
         android:id="@+id/button_end"
@@ -19,6 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
         android:text="@string/text_end"
-        android:layout_marginBottom="22dp" />
+        android:layout_marginBottom="22dp"
+        style="@style/AppButton.Retorna"/>
 
 </FrameLayout>

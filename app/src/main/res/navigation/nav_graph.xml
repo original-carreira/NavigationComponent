@@ -43,5 +43,32 @@
         android:id="@+id/loginFragment"
         android:name="com.example.navigationcomponent.iu.login.LoginFragment"
         android:label="Tela de Login"
-        tools:layout="@layout/login_fragment" />
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_navigation3"
+            app:destination="@id/navigation3" />
+    </fragment>
+    <navigation android:id="@+id/navigation3"
+        app:startDestination="@id/arquivoDataFragmento2">
+        <fragment
+            android:id="@+id/arquivoDataFragmento2"
+            android:name="com.example.navigationcomponent.iu.arquivoDeRegistro.registro.ArquivoDataFragmento"
+            android:label="fragment_arquivo_data_fragmento"
+            tools:layout="@layout/fragment_arquivo_data_fragmento" >
+            <action
+                android:id="@+id/action_arquivoDataFragmento2_to_credenciaisFragmento"
+                app:destination="@id/credenciaisFragmento" />
+        </fragment>
+        <fragment
+            android:id="@+id/credenciaisFragmento"
+            android:name="com.example.navigationcomponent.iu.arquivoDeRegistro.credenciais.CredenciaisFragmento"
+            android:label="Troque as credenciais"
+            tools:layout="@layout/fragment_credenciais_fragmento">
+            <argument
+                android:name="name_User"
+                app:argType="string"
+                app:nullable="false"/>
+        </fragment>
+
+    </navigation>
 </navigation>

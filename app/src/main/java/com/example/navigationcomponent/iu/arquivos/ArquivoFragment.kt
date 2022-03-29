@@ -32,7 +32,7 @@ class ArquivoFragment : Fragment(R.layout.fragment_arquivo) {
             estadoautenticacao ->
             when (estadoautenticacao){
                 is LoginViewModel.EstadoAutenticacao.AutenticacaoValida -> {
-                    binding.textoFragmentoArquivo.text  = getString(R.string.texto_nomeUsuario, loginViewModel.nomeUsuario)
+                    binding.textoFragmentoArquivo.text  = getString(R.string.texto_nomeUsuario, loginViewModel.username)
                 }
                 is LoginViewModel.EstadoAutenticacao.NaoAutenticado -> {
                     findNavController().navigate(R.id.loginFragment)

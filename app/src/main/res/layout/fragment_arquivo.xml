@@ -10,10 +10,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center"
         android:textSize="32sp"
         android:textStyle="italic"
-        tools:text="fragmento_arquivo" />
+        tools:text="Bem vindo, Victor!" />
 
     <Button
         android:id="@+id/button_acao_arquivo"
@@ -21,6 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|bottom"
         android:layout_marginBottom="22dp"
-        android:text="@string/texto_acionar" />
+        android:text="@string/texto_acionar"
+        style="@style/AppButton.Retorna"/>
 
 </FrameLayout>

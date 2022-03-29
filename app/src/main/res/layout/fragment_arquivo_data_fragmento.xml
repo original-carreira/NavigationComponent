@@ -5,56 +5,46 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".iu.login.LoginFragment">
+    android:padding="8dp"
+    tools:context=".iu.arquivoDeRegistro.registro.ArquivoDataFragmento">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/entrada_layoutCampo_login"
+        android:id="@+id/entrada_name_layout_arquivoData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/texto_campoLayout_login"
-        android:theme="@style/AppTextInputLayout">
+        android:theme="@style/AppTextInputLayout"
+        android:hint="@string/nome_hint_layout_entrada_arquivoData">
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/entrada_campo_login"
+            android:id="@+id/entrada_name_arquivoData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:imeOptions="actionNext"
-            android:inputType="text" />
+            android:inputType="textCapWords" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/entrada_layoutCampo_password"
+        android:id="@+id/entrada_bio_layout_arquivoData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:hint="@string/texto_campoLayout_senha"
-        android:theme="@style/AppTextInputLayout">
+        android:layout_marginTop="16dp"
+        android:theme="@style/AppTextInputLayout"
+        android:hint="@string/bio_hint_layout_entrada_arquivoData">
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/entrada_campo_password"
+            android:id="@+id/entrada_bio_arquivoData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:imeOptions="actionDone"
-            android:inputType="textPassword" />
-
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_login_confirma"
-        style="@style/AppButton"
+    <Button
+        android:id="@+id/botao_proximo_arquivoData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:text="@string/texto_button_confirmar" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_login_retorna"
-        style="@style/AppButton.Retorna"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:text="@string/texto_button_retornar" />
-
+        android:layout_marginTop="16dp"
+        android:text="@string/text_next"
+        style="@style/AppButton.Retorna"/>
 
 </LinearLayout>

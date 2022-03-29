@@ -5,18 +5,25 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".iu.login.LoginFragment">
+    android:padding="8dp"
+    tools:context=".iu.arquivoDeRegistro.credenciais.CredenciaisFragmento">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/texto_nomeTrocar_credenciais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Sr. Troque suas credenciais" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/entrada_layoutCampo_login"
+        android:id="@+id/entrada_username_layout_credenciais"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/texto_campoLayout_login"
-        android:theme="@style/AppTextInputLayout">
+        android:layout_marginTop="16dp"
+        android:theme="@style/AppTextInputLayout"
+        android:hint="@string/username_hint_layout_entrada_credenciais">
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/entrada_campo_login"
+            android:id="@+id/entrada_username_Credencias"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:imeOptions="actionNext"
@@ -24,37 +31,27 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/entrada_layoutCampo_password"
+        android:id="@+id/entrada_password_layout_credenciais"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:hint="@string/texto_campoLayout_senha"
-        android:theme="@style/AppTextInputLayout">
+        android:layout_marginTop="16dp"
+        android:theme="@style/AppTextInputLayout"
+        android:hint="@string/password_hint_layout_entrada_credenciais">
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/entrada_campo_password"
+            android:id="@+id/entrada_password_Credenciais"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:imeOptions="actionDone"
             android:inputType="textPassword" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_login_confirma"
+    <Button
+        android:id="@+id/botao_finalizar_credenciais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         style="@style/AppButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
         android:text="@string/texto_button_confirmar" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_login_retorna"
-        style="@style/AppButton.Retorna"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:text="@string/texto_button_retornar" />
-
 
 </LinearLayout>
